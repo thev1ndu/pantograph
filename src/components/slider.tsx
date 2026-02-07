@@ -49,7 +49,7 @@ const Slider = () => {
 
   return (
     <motion.div
-      className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-black/50"
+      className="relative w-full max-w-4xl mx-auto rounded-none overflow-hidden shadow-2xl border border-white/10 bg-black/50"
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -83,7 +83,7 @@ const Slider = () => {
             className="w-full h-full object-cover"
             draggable={false}
           />
-          <div className="absolute top-4 left-4 bg-orange-500/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-white border border-white/20 uppercase tracking-wider">
+          <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-white border border-white/20 uppercase tracking-wider shadow-lg">
             Processed
           </div>
         </div>

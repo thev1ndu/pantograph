@@ -1,6 +1,6 @@
 "use client";
-import { Crop, Expand, Scissors, Type, Zap } from "lucide-react";
 import React from "react";
+import { Crop, Expand, Scissors, Type, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
@@ -33,41 +33,42 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="w-full py-24 bg-background">
-      <div className="container max-w-5xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-          <div className="md:col-span-2 mb-8">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
-              Powerful Features
-            </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              Everything you need to transform your images, available in one
-              seamless workflow.
-            </p>
-          </div>
+    <section id="features" className="w-full py-24 relative overflow-hidden">
+      <div className="container max-w-6xl mx-auto px-6 relative z-10">
+        <div className="mb-16 md:text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            Feature Specifications
+          </h2>
+          <p className="text-lg text-muted-foreground">
+             Professional-grade capabilities for high-volume workflows.
+          </p>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-white/10">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-start space-x-5 group"
+              className="group relative p-8 border-b border-r border-white/10 hover:bg-white/[0.02] transition-colors duration-300"
             >
-              <div className="mt-1 p-2 rounded-lg bg-secondary/50 text-foreground group-hover:bg-primary/20 group-hover:text-primary transition-colors duration-300">
-                <feature.icon size={24} />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
+              <div className="flex flex-col h-full">
+                <div className="mb-6 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
+                   <feature.icon size={20} />
+                </div>
+                
+                <h3 className="text-lg font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                
+                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
                   {feature.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
+          {/* Filler div to complete the grid if odd number */}
+          {features.length % 3 !== 0 && (
+             <div className="hidden md:block border-b border-r border-white/10" />
+          )}
         </div>
       </div>
     </section>
