@@ -56,7 +56,7 @@ const Slider = () => {
     >
       <div
         ref={containerRef}
-        className="relative w-full aspect-[16/10] select-none cursor-ew-resize group"
+        className="relative w-full aspect-16/10 select-none cursor-ew-resize group"
         onMouseDown={handleMouseDown}
       >
         {/* Before Image (Background) */}

@@ -4,6 +4,7 @@
   /* fonts */
   --font-inter: "Inter", sans-serif;
 
+
   /* radius */
   --radius: 0.5rem;
 
@@ -110,7 +111,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent;
+    @apply bg-linear-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent;
   }
 }
 

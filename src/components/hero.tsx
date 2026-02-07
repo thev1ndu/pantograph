@@ -35,7 +35,7 @@ const Hero = () => {
 
           <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8">
             Redefine your <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-200">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-yellow-200">
               Visual Reality
             </span>
           </h1>
